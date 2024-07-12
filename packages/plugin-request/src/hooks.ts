@@ -36,6 +36,7 @@ export function useRequest<TData, TParams extends any[] = []>(
     ...req,
     // Modify ahooks' useRequest `run` as `request`
     request: req.run,
+    // Modify ahooks' useRequest `runAsync` as `requestAsync`
     requestAsync: req.runAsync,
   } as RequestResult<TData, TParams>;
 }
